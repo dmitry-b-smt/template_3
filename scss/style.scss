@@ -1,0 +1,428 @@
+@import "nullstyle.scss";
+@import "fonts.scss";
+
+body {
+      height: 100%;
+      font-family: "Nunito-ExtraLight", sans-serif;
+      background-color: #202020;
+      color: #415167;
+      font-size: 16px;
+      line-height: 24px;
+}
+
+.wrapper {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+}
+
+.container {
+      max-width: 1150px;
+      margin: 0 auto;
+}
+
+.link {
+      color: #edf0f5;
+}
+.link:hover {
+      font-weight: 700;
+}
+
+.section__title {
+      font-family: "Montserrat-Black", sans-serif;
+      font-weight: 900;
+      font-size: 23px;
+      line-height: 113%;
+      color: #415167;
+      text-align: center;
+      text-transform: uppercase;
+}
+@media (min-width: 480px) {
+      .section__title {
+            font-size: 30px;
+      }
+}
+
+.section__subtitle {
+      font-family: "Nunito-SemiBold", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      color: #415167;
+      text-align: center;
+      text-transform: capitalize;
+}
+@media (min-width: 480px) {
+      .section__subtitle {
+            font-size: 20px;
+      }
+}
+
+// -------------------HEADER------------------------
+.header {
+      display: flex;
+
+      &__column {
+            position: relative;
+            flex: 1 1 auto;
+            display: flex;
+      }
+      &__column:nth-child(1) {
+            width: 27.5vw;
+            background-color: #f9fbff;
+            display: flex;
+            justify-content: flex-end;
+      }
+      &__column:nth-child(2) {
+            width: 49.3vw;
+            position: relative;
+            padding: 0 0 60% 0;
+      }
+      &__column:nth-child(2) img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+      }
+      &__column:nth-child(3) {
+            width: 23.2vw;
+            background-color: #415167;
+      }
+
+      &__item {
+            position: relative;
+            padding: 50px 0px;
+      }
+      &__column:nth-child(1) &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 62px 0;
+      }
+
+      @media (min-width: 530px) {
+            &__column:nth-child(1) &__item {
+                  padding: 62px 0px 62px 16px;
+            }
+      }
+      @media (min-width: 1060px) {
+            &__column:nth-child(1) &__item {
+                  width: 257px;
+                  padding: 72px 0px 64px 32px;
+            }
+      }
+      &__column:nth-child(3) &__item {
+            display: flex;
+            justify-content: flex-end;
+            width: 150px;
+            margin: 0px 10px 0px 10px;
+      }
+      @media (min-width: 530px) {
+            &__column:nth-child(3) &__item {
+                  padding: 61px 0px 64px 27px;
+                  margin: 0px 10px 0px 0px;
+                  justify-content: flex-start;
+            }
+      }
+      @media (min-width: 1060px) {
+            &__column:nth-child(3) &__item {
+                  width: 203px;
+                  padding: 72px 0px 64px 57px;
+                  margin: 0;
+            }
+      }
+
+      &__logo {
+            position: relative;
+            padding: 0 0 30% 0;
+      }
+      &__logo img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75%;
+            height: 75%;
+            object-fit: fill;
+      }
+      @media (min-width: 530px) {
+            &__logo img {
+                  width: 78%;
+                  height: 78%;
+            }
+      }
+      @media (min-width: 1060px) {
+            &__logo img {
+                  width: 50%;
+                  height: 50%;
+            }
+      }
+
+      &__slogan {
+            font-size: 20px;
+            line-height: 130%;
+            position: relative;
+            z-index: 100;
+            font-weight: 900;
+            text-transform: uppercase;
+      }
+      @media (min-width: 530px) {
+            &__slogan {
+                  font-size: 28px;
+            }
+      }
+      @media (min-width: 1060px) {
+            &__slogan {
+                  font-size: 54px;
+            }
+      }
+      &__slogan p:not(:nth-child(2)) {
+            padding: 0 0 0 5px;
+      }
+      &__slogan p:nth-child(2) {
+            display: inline-block;
+            padding: 0 5px;
+            margin: 0 -75px 0 0;
+            color: #f9fbff;
+            background-color: #c7a17a;
+      }
+
+      &__cart {
+            display: block;
+            position: relative;
+            z-index: 1;
+            padding: 15px 0 0 0;
+            margin: 0 0 70px 0;
+      }
+      @media (min-width: 1060px) {
+            &__cart {
+                  margin: 0 0 118px 0;
+            }
+      }
+
+      &__cart-number {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            color: #f9fbff;
+            background-color: #c7a17a;
+            text-align: center;
+      }
+
+      &__menu {
+      }
+}
+.menu {
+      &__list {
+      }
+
+      &__item {
+            font-size: 10px;
+            line-height: 150%;
+            font-weight: 300;
+            font-family: "Nunito-ExtraLight";
+            color: #edf0f5;
+            display: inline-block;
+            padding: 0 0 15px 0;
+      }
+      &__item:hover {
+            font-family: "Nunito-Bold";
+      }
+      @media (min-width: 1060px) {
+            &__item {
+                  font-size: 16px;
+            }
+      }
+}
+
+// -------------------MAIN------------------------
+.main {
+      flex: 1 1 auto;
+}
+.build {
+      padding: 40px 5px;
+}
+@media (min-width: 1060px) {
+      .build {
+            padding: 87px 0px 128px 0px;
+      }
+}
+.build {
+      background-color: #f9fbff;
+
+      &__row {
+      }
+      &__row:first-child {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+      }
+
+      &__row:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+      }
+
+      &__subtitle {
+            margin: 8.56px;
+      }
+
+      &__title {
+            margin: 0px 0px 36px 0px;
+      }
+      @media (min-width: 1060px) {
+            &__title {
+                  margin: 0px 0px 72px 0px;
+            }
+      }
+
+      &__column {
+            max-width: 50%;
+            min-width: 170px;
+            margin: 0 0 30px 0;
+      }
+      @media (min-width: 830px) {
+            &__column {
+                  max-width: 25%;
+                  min-width: 200px;
+                  margin: 0;
+            }
+      }
+
+      &__item {
+            text-align: center;
+            padding: 0px 25px;
+      }
+
+      &__image {
+            position: relative;
+            padding: 0 0 50% 0;
+            margin: 0px 0px 22px 0px;
+      }
+      @media (min-width: 480px) {
+            &__image {
+                  margin: 0 0 42px 0;
+            }
+      }
+      &__image img {
+            position: absolute;
+            top: 0;
+            left: 25%;
+            width: 50%;
+            object-fit: cover;
+      }
+
+      &__item-title {
+            font-family: "Nunito-Bold", sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 117%;
+            color: #232c38;
+            margin: 0 0 12px 0;
+      }
+      @media (min-width: 480px) {
+            &__item-title {
+                  font-size: 24px;
+            }
+      }
+
+      &__text {
+            font-family: "Nunito-ExtraLight", sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            color: #151d28;
+      }
+      @media (min-width: 480px) {
+            &__text {
+                  font-size: 16px;
+            }
+      }
+}
+
+.goods {
+      &__background {
+            position: relative;
+      }
+
+      &__color-dark {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 72.57%;
+            background-color: #415167;
+            width: 27.43vw;
+            height: 100%;
+      }
+
+      &__color-light {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 27.43%;
+            background-color: #f9fbff;
+            width: 72.57vw;
+            height: 100%;
+      }
+
+      &__row {
+            position: relative;
+            z-index: 2;
+      }
+
+      &__subtitle {
+      }
+
+      &__title {
+      }
+
+      &__items {
+      }
+
+      &__item {
+      }
+
+      &__card {
+      }
+}
+
+.card {
+      &__image {
+      }
+
+      &__info {
+      }
+
+      &__price {
+      }
+
+      &__title {
+      }
+
+      &__description {
+      }
+
+      &__buttons {
+      }
+
+      &__button {
+      }
+
+      &__details {
+      }
+}
+.button {
+}
+.details {
+}
+
+// -------------------FOOTER------------------------
+.footer {
+}
